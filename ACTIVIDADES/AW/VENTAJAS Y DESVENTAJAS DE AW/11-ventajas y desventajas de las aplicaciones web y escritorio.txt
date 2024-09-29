@@ -1,0 +1,43 @@
+aplicaciones de escritorio
+
+ventajas:
+
+- depende de que aplicacion, una vez intalada se puede usar offline
+- mas estabilidad
+- mas rapidez que las aplicaciones web
+- son mas seguras depende de su programacion
+
+inconvenientes:
+
+- la instalacion tarda un tiempo determinado*
+- ocupa espacio en tu almacenamiento +
+- puede llevar virus con la instalacion
+- depende del sistema operativo puedes o no puedes intalarlo
+
+aplicaciones web
+
+ventajas:
+
+- son mas rapidas que las de escritorio, debido ha que no se tienen que instalar *
+- se puede usar de cualquier sistema operativo*
+- no ocupa espacio*
+- libre de virus y malware
+- solo necesitas un navegador para tenerlas
+- las actualizaciones son al instante
+
+inconvenientes: 
+
+- dependes de una conexion ha internet*
+- ofrece menos funcionalidades que la de escritorio 
+- no tienes privacidad
+- no puedes elegir la  
+
+aplicaciones web:
+
+correo electronico: sirve para comunicarse mediante  email con cualquier persona que tenga un correo electronico
+
+facebook: aplicacion web en la que la gente se crea un perfil para comunicarse con cualquier persona como tus amigos 
+tu familia y tambien puedes jugar ha juegos colgar fotos...
+
+tinder: aplicacion web en la que hablas con otras persona para contraer el acto coital y satisfacer tus necesidades 
+de primate

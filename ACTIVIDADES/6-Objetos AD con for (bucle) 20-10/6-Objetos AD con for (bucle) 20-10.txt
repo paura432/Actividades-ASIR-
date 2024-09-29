@@ -1,0 +1,23 @@
+dsadd ou ou=practicafor,dc=PAU,dc=LOCAL
+pause
+FOR /L %%a IN (1 1 5) DO dsadd ou ou=UO%%a,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 5) DO dsadd ou ou=users,ou=UO%%A,ou=practicafor,dc=PAU,dc=LOCAL 
+FOR /L %%A IN (1 1 5) DO dsadd ou ou=groups,ou=UO%%A,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 5) DO dsadd ou ou=computers,ou=UO%%A,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 10) DO dsadd user cn=UO1USER%%A,ou=users,ou=UO1,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 10) DO dsadd user cn=UO2USER%%A,ou=users,ou=UO2,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 10) DO dsadd user cn=UO3USER%%A,ou=users,ou=UO3,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 10) DO dsadd user cn=UO4USER%%A,ou=users,ou=UO4,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 10) DO dsadd user cn=UO5USER%%A,ou=users,ou=UO5,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 5) DO dsadd group cn=groupUO%%A,ou=groups,ou=UO%%A,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 5) DO dsquery user ou=users,ou=UO%%A,ou=practicafor,dc=PAU,dc=LOCAL | dsmod group cn=groupUO%%A,ou=groups,ou=UO%%A,ou=practicafor,dc=PAU,dc=LOCAL -addmbr
+FOR /L %%A IN (1 1 10) DO dsadd computer cn=UO1pc%%A,ou=computers,ou=UO1,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 10) DO dsadd computer cn=UO2pc%%A,ou=computers,ou=UO2,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 10) DO dsadd computer cn=UO3pc%%A,ou=computers,ou=UO3,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 10) DO dsadd computer cn=UO4pc%%A,ou=computers,ou=UO4,ou=practicafor,dc=PAU,dc=LOCAL
+FOR /L %%A IN (1 1 10) DO dsadd computer cn=UO5pc%%A,ou=computers,ou=UO5,ou=practicafor,dc=PAU,dc=LOCAL
+
+
+
+
+pause

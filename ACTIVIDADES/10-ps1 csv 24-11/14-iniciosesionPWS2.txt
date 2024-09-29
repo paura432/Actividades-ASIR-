@@ -1,0 +1,59 @@
+@echo off
+
+If %username%==QAMaria Goto conta1
+If %username%==RADavid Goto conta2
+If %username%==RPBorja Goto conta3
+If %username%==RRJavier Goto venta1
+If %username%==RFJoaquin Goto venta2
+If %username%==RGMiriam Goto sistemas
+If %username%==RGIsabel Goto gerencia
+
+:venta1
+Net Use v: /del /yes
+net use v: \\Server_2012_pau\PracticaPWS2\venta
+net Use x: /del /yes
+net use x: \\Server_2012_pau\PracticaPWS2\general\publica
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\PracticaPWS2\general\privada_%username%
+:venta2
+Net Use v: /del /yes
+net use v: \\Server_2012_pau\PracticaPWS2\venta
+net Use x: /del /yes
+net use x: \\Server_2012_pau\PracticaPWS2\general\publica
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\PracticaPWS2\general\privada_%username%
+exit
+:conta1
+Net Use z: /del /yes
+net use z: \\Server_2012_pau\PracticaPWS2\contabilidad
+net Use x: /del /yes
+net use x: \\Server_2012_pau\PracticaPWS\general\publica
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\PracticaPWS\general\privada_%username%
+exit
+:conta2
+Net Use z: /del /yes
+net use z: \\Server_2012_pau\PracticaPWS2\contabilidad
+net Use x: /del /yes
+net use x: \\Server_2012_pau\PracticaPWS2\general\publica
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\PracticaPWS2\general\privada_%username%
+exit
+:conta3
+Net Use z: /del /yes
+net use z: \\Server_2012_pau\PracticaPWS2\contabilidad
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\PracticaPWS2\general\privada_%username%
+net Use x: /del /yes
+net use x: \\Server_2012_pau\PracticaPWS2\general\publica
+exit
+:sistemas
+Net Use y: /del /yes
+net use y: \\Server_2012_pau\PracticaPWS2
+exit
+:gerencia
+Net Use y: /del /yes
+net use y: \\Server_2012_pau\PracticaPWS2
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\PracticaPWS2\general\privada_%username%
+exit

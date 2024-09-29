@@ -1,0 +1,29 @@
+como se conecta una unidad de red
+
+set username
+net use z: \\server2012josse\contabilidad
+net share
+desc
+dsadd user dn -loscr pau_ejecutable3.bat
+
+net use z: /del /yes
+net use y: /del /yes
+
+if %username%==jcrodriguez goto contabilidad
+if %username%==pau goto almacen
+
+:contabilidad 
+net use z: \\server2012josse\contabilidad
+net use y: \\server2012josse\general
+exit
+
+:almacen
+net use z: \\server2012josse\almacen
+net use y: \\server2012josse\general
+exit
+
+FOR /L %%A IN (1 1 10) DO dsadd computer cn=UO5pc%%A,ou=computers,ou=UO5,ou=practicafor,dc=PAU,dc=LOCAL
+
+C:\Windows\SYSVOL\sysvol\PAU.LOCAL\SCRIPTS
+
+PRIVADO (file://Server_2012_pau/general/PRIVADO)

@@ -1,0 +1,48 @@
+dsadd ou ou=paudia13,dc=PAU,dc=LOCAL
+
+dsadd ou ou=users,ou=paudia13,dc=PAU,dc=LOCAL
+
+dsadd ou ou=groups,ou=paudia13,dc=PAU,dc=LOCAL
+
+dsadd ou ou=computers,ou=paudia13,dc=PAU,dc=LOCAL
+
+dsadd user cn=pauuser01,ou=users,ou=paudia13,dc=PAU,dc=LOCAL
+ -pwd Itep1234 -mustchpwd yes -fn pauuser01 -ln pauuser01
+
+dsadd user cn=pauuser02,ou=users,ou=paudia13,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser02 -ln pauuser02
+
+dsadd user cn=pauuser03,ou=users,ou=paudia13,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser03 -ln pauuser03
+
+dsadd user cn=pauuser04,ou=users,ou=paudia13,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser04 -ln pauuser04
+
+dsadd user cn=pauuser05,ou=users,ou=paudia13,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser05 -ln pauuser05
+
+dsadd user cn=pauuser06,ou=users,ou=paudia13,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser06 -ln pauuser06
+
+dsadd ou ou=paudia13bis,dc=PAU,dc=LOCAL
+
+dsadd ou ou=users,ou=paudia13bis,dc=PAU,dc=LOCAL
+
+dsadd ou ou=groups,ou=paudia13bis,dc=PAU,dc=LOCAL
+
+dsadd ou ou=computers,ou=paudia13bis,dc=PAU,dc=LOCAL
+
+dsadd user cn=pauuser01bis,ou=users,ou=paudia13bis,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser01 -ln pauuser01
+
+dsadd user cn=pauuser02bis,ou=users,ou=paudia13bis,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser02 -ln pauuser02
+
+dsadd user cn=pauuser03bis,ou=users,ou=paudia13bis,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser03 -ln pauuser03
+
+dsadd user cn=pauuser04bis,ou=users,ou=paudia13bis,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser04 -ln pauuser04
+
+dsadd user cn=pauuser05bis,ou=users,ou=paudia13bis,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser05 -ln pauuser05
+
+dsadd user cn=pauuser06bis,ou=users,ou=paudia13bis,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn pauuser06 -ln pauuser06
+
+dsrm -subtree -noprompt -c ou=paudia13,dc=PAU,dc=LOCAL
+
+dsrm -subtree -noprompt -c ou=paudia13bis,dc=PAU,dc=LOCAL
+
+
+
+

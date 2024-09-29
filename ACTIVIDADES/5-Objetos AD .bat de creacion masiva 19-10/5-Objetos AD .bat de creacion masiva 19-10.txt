@@ -1,0 +1,155 @@
+dsadd ou ou=dia19,dc=PAU,dc=LOCAL
+dsadd ou ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd ou ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd user cn=galonso,ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn gabriela -ln alonso
+dsadd user cn=garrazola,ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn guadalupe -ln arrazola
+dsadd user cn=jbrink,ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn jessica -ln brink
+dsadd user cn=acamacho,ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn alana -ln camacho
+dsadd user cn=dcaro,ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn davis -ln caro
+dsadd user cn=acenteno,ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn andrea -ln centeno
+dsadd user cn=ichavez,ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn ivonne -ln chavez
+dsadd user cn=acorona,ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn alejandra -ln corona
+dsadd ou ou=equipos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=conta01,ou=equipos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=conta02,ou=equipos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=conta03,ou=equipos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=conta04,ou=equipos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=conta05,ou=equipos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=conta06,ou=equipos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=conta07,ou=equipos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=conta08,ou=equipos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+net user galonso /time:l-v,8-16 /workstations:cont01,cont02,cont03,cont04,cont05,cont05,cont06,cont07,cont08
+net user garrazola /time:l-v,8-16 /workstations:cont02
+net user jbrink /time:l-v,8-16 /workstations:cont03
+net user acamacho /time:l-v,8-16 /workstations:cont04
+net user dcaro /time:l-v,8-16 /workstations:cont05
+net user acenteno /time:l-v,8-16 /workstations:cont06
+net user ichavez /time:l-v,8-16 /workstations:cont07
+net user acorona /time:l-v,8-16 /workstations:cont08
+dsadd ou ou=grupos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsadd group cn=contabilidad,ou=grupos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL
+dsquery user ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL | dsmod group cn=contabilidad,ou=grupos,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL -addmbr
+pause
+dsadd ou ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd ou ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd user cn=jdomingez,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn joselina -ln domingez
+dsadd user cn=eflores,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn edith -ln flores
+dsadd user cn=mgalindo,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn marisol -ln galindo
+dsadd user cn=agarcia,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn andres -ln garcia
+dsadd user cn=vhernandez,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn victor -ln hernandez
+dsadd user cn=lhernandez,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn luisa -ln hernandez
+dsadd user cn=fibanez,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn fernando -ln ibanez
+dsadd user cn=eleyva,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn ernesto -ln leyva
+dsadd user cn=ulopez,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn ulises -ln lopez
+dsadd user cn=mmartinez,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn maria -ln martinez
+dsadd user cn=mmendivil,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn manuel -ln mendivil
+dsadd ou ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh01,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh02,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh03,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh04,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh05,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh06,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh07,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh08,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh09,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh10,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=rrhh11,ou=equipos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+net user jdomingez /time:l-v,9-17 /workstations:rrhh01,rrhh02,rrhh03,rrhh04,rrhh05,rrhh06,rrhh07,rrhh08,rrhh09,rrhh10,rrhh11
+net user eflores /time:l-v,9-17 /workstations:rrhh02
+net user mgalindo /time:l-v,9-17 /workstations:rrhh02
+net user agarcia /time:l-v,9-17 /workstations:rrhh04
+net user vhernandez /time:l-v,9-17 /workstations:rrhh05
+net user lhernandez /time:l-v,9-17 /workstations:rrhh06
+net user fibanez /time:l-v,9-17 /workstations:rrhh07
+net user eleyva /time:l-v,9-17 /workstations:rrhh08
+net user ulopez /time:l-v,9-17 /workstations:rrhh09
+net user mmartinez /time:l-v,9-17 /workstations:rrhh10
+net user mmendivil /time:l-v,9-17 /workstations:rrhh11
+dsadd ou ou=grupos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsadd group cn=rrhh,ou=grupos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL
+dsquery user ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL | dsmod group cn=rrhh,ou=grupos,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL -addmbr
+pause
+dsadd ou ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd ou ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd user cn=imercado,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn ingrid -ln mercado
+dsadd user cn=amiranda,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn armando -ln miranda
+dsadd user cn=amoroyoqui,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn ana -ln moroyoqui
+dsadd user cn=dortega,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn daniela -ln ortega
+dsadd user cn=fpeña,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn fernanda -ln peña
+dsadd user cn=aponce,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn arley -ln ponce
+dsadd user cn=frenteria,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn felipe -ln rentaria
+dsadd user cn=crey,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn citlali -ln rey
+dsadd user cn=nreyna,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn noemi -ln reyna
+dsadd user cn=ereynoso,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn elizabeth -ln reynoso
+dsadd user cn=krodriguez,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn karina -ln rodriguez
+dsadd user cn=lrodriguez,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn lilia -ln rodriguez
+dsadd ou ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log01,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log02,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log03,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log04,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log05,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log06,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log07,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log08,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log09,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log10,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log11,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=log12,ou=equipos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+net user imercado /time:l-v,8-16 /workstations:log01,log02,log03,log04,log05,log06,log07,log08,log09,log10,log11,log12
+net user amiranda /time:l-v,8-16 /workstations:log02
+net user amoroyoqui  /time:l-v,8-16 /workstations:log03
+net user dortega /time:l-v,8-16 /workstations:log04
+net user fpeña /time:l-v,8-16 /workstations:log05
+net user aponce /time:l-v,8-16 /workstations:log06
+net user frenteria /time:l-v,8-16 /workstations:log07
+net user crey /time:l-v,8-16 /workstations:log08
+net user nreyna /time:l-v,8-16 /workstations:log09
+net user ereynoso /time:l-v,8-16 /workstations:log10
+net user krodriguez /time:l-v,8-16 /workstations:log11
+net user lrodriguez /time:l-v,8-16 /workstations:log12
+dsadd ou ou=grupos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsadd group cn=logistica,ou=grupos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL
+dsquery user ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL | dsmod group cn=logistica,ou=grupos,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL -addmbr
+pause
+dsadd ou ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+dsadd ou ou=users,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+dsadd user cn=erodriguez,ou=users,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn eduardo -ln rodriguez
+dsadd user cn=fruiz,ou=users,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn monica -ln ruiz
+dsadd user cn=asandoval,ou=users,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn alejandro -ln sandoval
+dsadd user cn=ovaldovimos,ou=users,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn oriana -ln valdovinos
+dsadd user cn=svazquez,ou=users,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn salma -ln vazquez
+dsadd ou ou=equipos,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=com01,ou=equipos,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=com02,ou=equipos,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=com03,ou=equipos,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=com04,ou=equipos,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=com05,ou=equipos,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+net user erodriguez /time:l-v,8-17;s,9-14 /workstations:com01,com02,com03,com04,com05
+net user fruiz /time:l-v,8-17;s,9-14 /workstations:com02
+net user asandoval /time:l-v,8-17;s,9-14 /workstations:com03
+net user ovaldovimos /time:l-v,8-17;s,9-14 /workstations:com04
+net user svazquez /time:l-v,8-17;s,9-14 /workstations:com05
+dsadd ou ou=grupos,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+dsadd group cn=comercial,ou=grupos,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL
+pause
+dsquery user ou=users,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL | dsmod group cn=comercial,ou=grupos,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL -addmbr
+dsadd ou ou=direccion,ou=dia19,dc=PAU,dc=LOCAL
+dsadd ou ou=users,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL
+dsadd user cn=sverduzco,ou=users,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn salvador -ln verduzco
+dsadd user cn=mzavala,ou=users,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL -pwd Itep1234 -mustchpwd yes -fn moises -ln zavala
+dsadd ou ou=equipos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=dir01,ou=equipos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL
+dsadd computer cn=dir02,ou=equipos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL
+net user erodriguez /workstations:dir01,dir02
+net user fruiz /workstations:dir02
+dsadd ou ou=grupos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL
+dsadd group cn=direccion,ou=grupos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL
+dsquery user ou=users,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL | dsmod group cn=direccion,ou=grupos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL -addmbr
+dsadd group cn=responsables,ou=grupos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL
+dsquery user cn=galonso,ou=users,ou=contabilidad,ou=dia19,dc=PAU,dc=LOCAL | dsmod group cn=responsables,ou=grupos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL -addmbr
+dsquery user cn=jdomingez,ou=users,ou=rrhh,ou=dia19,dc=PAU,dc=LOCAL | dsmod group cn=responsables,ou=grupos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL -addmbr
+dsquery user cn=imercado,ou=users,ou=logistica,ou=dia19,dc=PAU,dc=LOCAL | dsmod group cn=responsables,ou=grupos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL -addmbr
+dsquery user cn=erodriguez,ou=users,ou=comercial,ou=dia19,dc=PAU,dc=LOCAL | dsmod group cn=responsables,ou=grupos,ou=direccion,ou=dia19,dc=PAU,dc=LOCAL -addmbr
+pause

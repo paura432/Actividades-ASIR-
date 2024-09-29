@@ -1,0 +1,101 @@
+@echo off
+Net Use y: /del /yes
+net use y: \\Server_2012_pau\general
+If %username%==SABARCA Goto enfermeriaresp
+If %username%==FALONSO Goto enfermeria
+If %username%==KALVARADO Goto enfermeria
+If %username%==OBAÑUELOS Goto enfermeria
+If %username%==DCABRERA Goto enfermeria
+If %username%==JCANIZALES Goto enfermeria
+
+If %username%==MCORVERA Goto administracionresp
+If %username%==LFIERRO Goto administracion
+If %username%==AIBARRA Goto administracion
+If %username%==LGIL Goto administracion
+If %username%==MMENECES Goto administracion
+
+If %username%==YMORALES  Goto laboratorioresp
+If %username%==LNUNEZ  Goto laboratorio
+If %username%==IOCHOA Goto laboratorio
+If %username%==GPANTOJA Goto laboratorio
+If %username%==JRAMIREZ Goto laboratorio
+
+If %username%==GRAMOS Goto almacenresp
+If %username%==MURBINA Goto almacen
+If %username%==DVALDEZ Goto almacen
+If %username%==MVALDEZ Goto almacen
+
+If %username%==PLARA Goto direccion
+
+If %username%==PRAMOS Goto sistemas
+
+:enfermeria
+Net Use z: /del /yes
+net use z: \\Server_2012_pau\enfermeria
+exit
+:enfermeriaresp
+Net Use z: /del /yes
+net use z: \\Server_2012_pau\enfermeria
+Net Use x: /del /yes
+net use x: \\Server_2012_pau\responsables
+exit
+:administracion
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\administracion
+exit
+:administracionresp
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\administracion
+Net Use x: /del /yes
+net use x: \\Server_2012_pau\responsables
+exit
+:laboratorio
+Net Use v: /del /yes
+net use v: \\Server_2012_pau\laboratorio
+exit
+:laboratorioresp
+Net Use v: /del /yes
+net use v: \\Server_2012_pau\laboratorio
+Net Use x: /del /yes
+net use x: \\Server_2012_pau\responsables
+exit
+:almacen
+Net Use u: /del /yes
+net use u: \\Server_2012_pau\almacen
+exit
+:almacenresp
+Net Use u: /del /yes
+net use u: \\Server_2012_pau\almacen
+Net Use x: /del /yes
+net use x: \\Server_2012_pau\responsables
+exit
+:direccion
+Net Use z: /del /yes
+net use z: \\Server_2012_pau\enfermeria
+Net Use x: /del /yes
+net use x: \\Server_2012_pau\responsables
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\administracion
+Net Use v: /del /yes
+net use v: \\Server_2012_pau\laboratorio
+Net Use u: /del /yes
+net use u: \\Server_2012_pau\almacen
+Net Use t: /del /yes
+net use t: \\Server_2012_pau\direccion
+exit
+:sistemas
+Net Use z: /del /yes
+net use z: \\Server_2012_pau\enfermeria
+Net Use x: /del /yes
+net use x: \\Server_2012_pau\responsables
+Net Use w: /del /yes
+net use w: \\Server_2012_pau\administracion
+Net Use v: /del /yes
+net use v: \\Server_2012_pau\laboratorio
+Net Use u: /del /yes
+net use u: \\Server_2012_pau\almacen
+Net Use t: /del /yes
+net use t: \\Server_2012_pau\direccion
+Net Use s: /del /yes
+net use s: \\Server_2012_pau\sistemas
+exit
